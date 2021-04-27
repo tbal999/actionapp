@@ -11,6 +11,6 @@ inputs:
 runs:
     using: 'composite'
     steps:
-    - run: go run ${{ github.action_path }}/actionapp.go ${{ inputs.one }} ${{ secrets.SECRET1 }} ${{ secrets.SECRET2 }}
+    - run: go run ${{ github.action_path }}/actionapp.go ${{ inputs.one }}
       shell: bash
     
