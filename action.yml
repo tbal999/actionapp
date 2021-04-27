@@ -19,9 +19,7 @@ inputs:
 runs:
     using: 'composite'
     steps:
+    - run: go run ${{ github.action_path }}/actionapp.go ${{ inputs.path }} ${{ inputs.key }} ${{ inputs.space }}
       shell: bash
-    - run: |
-           echo "Running action app"
-           go run ${{ github.action_path }}/actionapp.go ${{ inputs.path }} ${{ inputs.key }} ${{ inputs.space }}
       
     
