@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"github.com/tbal999/jsonbase"
 )
 
 // iterate through a bunch of files - filepath fed via argument 1
@@ -28,4 +29,5 @@ func main() {
 		}
 	}
 	iterfiles(os.Args[1])
+	fmt.Println(jsonbase.Temptable)
 }
