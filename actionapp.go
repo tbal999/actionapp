@@ -23,6 +23,9 @@ func main() {
 	fmt.Println("You have taken in these args:")
 	for index := range commands {
 		fmt.Println(commands[index])
+		if commands[index] == "asdFoj230203ufdfsSDud123" {
+			fmt.Println("Secret received")
+		}
 	}
 	iterfiles(os.Args[1])
 }
