@@ -3,14 +3,22 @@ description: 'this app will print out a bunch of files in a given path...'
 author: '@tbal999'
 
 inputs:
-  one:
-    description: 'arg 1'
+  path:
+    description: 'path'
     required: true
     default: './'
+  key:
+    description: 'api key'
+    required: true
+    default: '???'
+  space:
+    description: 'space'
+    required: true
+    default: '???'
 
 runs:
     using: 'composite'
     steps:
-    - run: go run ${{ github.action_path }}/actionapp.go ${{ inputs.one }}
+    - run: go run ${{ github.action_path }}/actionapp.go ${{ inputs.path }} ${{ inputs.key }} ${{ inputs.space }}
       shell: bash
     
