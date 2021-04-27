@@ -33,5 +33,6 @@ jobs:
           fetch-depth: 0
       - name: run composite action
         uses: tbal999/actionapp@2
-        with: 
+        with:
+          path: './main'
           args: '../main'
