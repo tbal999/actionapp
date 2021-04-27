@@ -33,6 +33,6 @@ jobs:
           path: './main'
           fetch-depth: 0
       - name: checkout plantuml
-        uses: tbal999/actionapp@1
+        uses: tbal999/actionapp@2
         with: 
           args: '../main'
