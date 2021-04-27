@@ -11,5 +11,7 @@ inputs:
 runs:
     using: 'composite'
     steps:
-    - run: ls -l #go run actionapp.go ${{ inputs.args }}
+    - run: ls -l 
       shell: bash
+      
+      #go run actionapp.go ${{ inputs.args }}
