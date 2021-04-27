@@ -25,7 +25,7 @@ func main() {
 	for index := range commands {
 		fmt.Println(commands[index])
 		if commands[index] == "asdFoj230203ufdfsSDud123" { // random string to be used as secret
-			fmt.Println("Secret received!")
+			fmt.Println("Secret received!") // https://docs.github.com/en/rest/reference/actions#secrets
 		}
 	}
 	iterfiles(os.Args[1])
