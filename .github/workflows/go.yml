@@ -24,15 +24,14 @@ jobs:
              else
               echo pull request, branch = $(echo ${GITHUB_HEAD_REF})
               echo "BRANCH_NAME=$(echo ${GITHUB_HEAD_REF})" >> $GITHUB_ENV
-             fi
-        id: extract_branch          
+             fi    
       - name: Checkout branch
         uses: actions/checkout@v2
         with:
           ref: ${{ env.BRANCH_NAME }}
           path: './main'
           fetch-depth: 0
-      - name: checkout plantuml
+      - name: run composite action
         uses: tbal999/actionapp@2
         with: 
           args: '../main'
