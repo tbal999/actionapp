@@ -19,10 +19,7 @@ func iterfiles(path string) {
 }
 
 func main() {
-	commands := os.Args[1:]
+	commands := strings.Split(os.Args[2:], ",")
 	fmt.Println("You have taken in these args:")
-	for index := range commands {
-		fmt.Println(commands[index])
-	}
 	iterfiles(os.Args[1])
 }
