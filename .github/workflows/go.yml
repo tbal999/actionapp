@@ -29,9 +29,9 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: ${{ env.BRANCH_NAME }}
-          path: './main'
+          path: './hello'
           fetch-depth: 0
       - name: run composite action
         uses: tbal999/actionapp@4
         with:
-          args: './main'
+          args: './hello'
