@@ -1,0 +1,14 @@
+name: 'action app'
+description: 'this app will print out a bunch of files in a given path'
+author: '@tbal999'
+
+inputs:
+  args:
+    description: 'Arguments for app'
+    required: true
+    default: './'
+
+runs:
+    using: 'composite'
+    -run: go run goexample.go ${{ inputs.args }}
+     shell: bash
