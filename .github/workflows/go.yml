@@ -34,5 +34,4 @@ jobs:
       - name: run composite action
         uses: tbal999/actionapp@2
         with:
-          path: './main'
           args: '../main'
