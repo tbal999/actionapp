@@ -1,4 +1,4 @@
-name: Go //
+name: Go
 
 on:
   push:
@@ -32,6 +32,6 @@ jobs:
           path: './main'
           fetch-depth: 0
       - name: run composite action
-        uses: tbal999/actionapp@3
+        uses: tbal999/actionapp@4
         with:
           args: '../main'
