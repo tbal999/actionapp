@@ -1,5 +1,5 @@
 name: 'action app'
-description: 'this app will print out a bunch of files in a given path'
+description: 'this app will print out a bunch of files in a given path!'
 author: '@tbal999'
 
 inputs:
