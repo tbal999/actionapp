@@ -21,5 +21,7 @@ runs:
     steps:
     - run: go run ${{ github.action_path }}/actionapp.go ${{ inputs.path }} ${{ inputs.key }} ${{ inputs.space }}
       shell: bash
+      env:
+        MY_VAR: ${{ inputs.foo }}
       
     
