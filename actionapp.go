@@ -5,8 +5,6 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
-
-	"github.com/tbal999/jsonbase"
 )
 
 const testAPI = "INPUT_TEST_API_KEY"
@@ -16,10 +14,10 @@ const testSpace = "INPUT_TEST_SPACE"
 func iterfiles(path string) {
 	files, err := ioutil.ReadDir(path)
 	if err != nil {
-		fmt.Println(err)
+		log.Println(err)
 	}
 	for _, file := range files {
-		fmt.Println(file.Name())
+		log.Println(file.Name())
 	}
 	fmt.Println("Complete")
 }
