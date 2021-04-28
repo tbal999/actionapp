@@ -29,10 +29,10 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: ${{ env.BRANCH_NAME }}
-          path: './hello'
+          path: './repo'
           fetch-depth: 0
       - name: run composite action
-        uses: ./
+        uses: './repo'
         with:
           path: './hello'
           key: 'Thisisakey'
