@@ -32,7 +32,7 @@ jobs:
           path: './hello'
           fetch-depth: 0
       - name: run composite action
-        uses: ./hello
+        uses: ./
         with:
           path: './hello'
           key: 'Thisisakey'
