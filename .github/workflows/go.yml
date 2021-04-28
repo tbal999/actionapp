@@ -34,4 +34,7 @@ jobs:
       - name: run composite action
         uses: tbal999/actionapp@4
         with:
-          args: './hello'
+          path: './hello'
+          key: 'Thisisakey'
+          space: 'ExampleSpace'
+          
