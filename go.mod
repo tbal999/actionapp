@@ -1,4 +1,4 @@
-module actionapp
+module github.com/tbal999/actionapp
 
 go 1.15
 
