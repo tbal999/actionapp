@@ -4,24 +4,24 @@ author: '@tbal999'
 
 inputs:
   path:
-    description: 'path'
+    description: 'Repo Path'
     required: true
     default: './'
   key:
-    description: 'api key'
+    description: 'User'
     required: true
     default: '???'
   space:
-    description: 'space'
+    description: 'API Key'
     required: true
     default: '???'
 
 runs:
     using: 'composite'
     steps:
-    - run: go run ${{ github.action_path }}/actionapp.go ${{ inputs.path }} ${{ inputs.key }} ${{ inputs.space }}
+    - run: go run ${{ github.action_path }}/actionapp.go ${{ inputs.path }}  
       shell: bash
       env:
-        MY_VAR: ${{ inputs.foo }}
-      
+        INPUT_TEST_API_KEY: ${{ inputs.key }}
+        INPUT_TEST_SPACE: ${{ inputs.space }}
     
