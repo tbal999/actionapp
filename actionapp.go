@@ -1,9 +1,12 @@
 package main
 
 import (
+	"fmt"
 	"io/ioutil"
 	"log"
 	"os"
+
+	"github.com/tbal999/jsonbase"
 )
 
 const testAPI = "INPUT_TEST_API_KEY"
@@ -45,4 +48,6 @@ func main() {
 	if ok := checkConfluenceEnv(); ok {
 		iterfiles(os.Args[1])
 	}
+
+	fmt.Println(jsonbase.Temptable)
 }
