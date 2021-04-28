@@ -49,19 +49,8 @@ func checkConfluenceEnv() {
 	}
 }
 
-func init() {
-	checkConfluenceEnv()
-}
-
 func main() {
-	commands := os.Args[2:]
-	fmt.Println("You have taken in these args:")
-	for index := range commands {
-		fmt.Println(commands[index])
-		if commands[index] == "asdFoj230203ufdfsSDud123" { // random string to be used as secret
-			fmt.Println("Secret received!") // https://docs.github.com/en/rest/reference/actions#secrets
-		}
-	}
+	checkConfluenceEnv()
 	iterfiles(os.Args[1])
 	fmt.Println(jsonbase.Temptable) // just to demonstrate you can run go app with external packages.
 }
