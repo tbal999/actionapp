@@ -19,7 +19,7 @@ inputs:
 runs:
     using: 'composite'
     steps:
-    - run: export GO111MODULE=off; go mod init github.com/tbal999/actionapp; go mod tidy
+    - run: export GO111MODULE=on; go mod init github.com/tbal999/actionapp; go mod tidy
       shell: bash
     - run: go run ${{ github.action_path }}/. ${{ inputs.path }}  
       shell: bash
