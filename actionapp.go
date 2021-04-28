@@ -9,7 +9,6 @@ import (
 	"github.com/tbal999/jsonbase"
 )
 
-const testUser = "INPUT_TEST_USERNAME"
 const testAPI = "INPUT_TEST_API_KEY"
 const testSpace = "INPUT_TEST_SPACE"
 
@@ -27,14 +26,6 @@ func iterfiles(path string) {
 
 // checkConfluenceEnv is a placeholder function for checking the required env vars are set
 func checkConfluenceEnv() bool {
-	username, exists := os.LookupEnv(testUser)
-	if !exists {
-		log.Printf("Environment variable not set for %s", testUser)
-		return false
-	} else {
-		log.Printf("USER: %s", username)
-	}
-
 	apiKey, exists := os.LookupEnv(testAPI)
 	if !exists {
 		log.Printf("Environment variable not set for %s", testAPI)
