@@ -32,7 +32,7 @@ jobs:
           path: './hello'
           fetch-depth: 0
       - name: run composite action
-        uses: tbal999/actionapp@v9
+        uses: tbal999/actionapp@v8
         with:
           path: './hello'
           key: 'Thisisakey'
