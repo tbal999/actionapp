@@ -3,7 +3,9 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"log"
 	"os"
+
 	"github.com/tbal999/jsonbase"
 )
 
@@ -48,7 +50,7 @@ func checkConfluenceEnv() {
 }
 
 func init() {
-	checkConfluenceEnv()	
+	checkConfluenceEnv()
 }
 
 func main() {
