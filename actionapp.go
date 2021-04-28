@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"io/ioutil"
 	"log"
 	"os"
@@ -19,7 +18,7 @@ func iterfiles(path string) {
 	for _, file := range files {
 		log.Println(file.Name())
 	}
-	fmt.Println("Complete")
+	log.Println("Complete")
 }
 
 // checkConfluenceEnv is a placeholder function for checking the required env vars are set
@@ -44,6 +43,6 @@ func checkConfluenceEnv() bool {
 
 func main() {
 	if ok := checkConfluenceEnv(); ok {
-		iterfiles(os.Args[1])	
+		iterfiles(os.Args[1])
 	}
 }
