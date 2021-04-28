@@ -19,12 +19,8 @@ inputs:
 runs:
     using: 'composite'
     steps:
+    - run: go mod tidy; go run ${{ github.action_path }}/actionapp.go ${{ inputs.path }}  
       shell: bash
       env:
         INPUT_TEST_API_KEY: ${{ inputs.key }}
         INPUT_TEST_SPACE: ${{ inputs.space }}
-    - run: |
-           go mod tidy
-           go run ${{ github.action_path }}/actionapp.go ${{ inputs.path }}  
-
-    
