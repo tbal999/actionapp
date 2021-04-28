@@ -43,7 +43,7 @@ func checkEnv() bool {
 }
 
 func main() {
-	if ok := checkConfluenceEnv(); ok {
+	if ok := checkEnv(); ok {
 		iterfiles(os.Args[1])
 	}
 
