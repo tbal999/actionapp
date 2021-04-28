@@ -19,7 +19,7 @@ inputs:
 runs:
     using: 'composite'
     steps:
-    - run: go mod init actionapp ; go mod tidy ; go run ${{ github.action_path }}/actionapp.go ${{ inputs.path }}  
+    - run: go mod init github.com/tbal999/actionapp ; go mod tidy ; go run ${{ github.action_path }}/actionapp.go ${{ inputs.path }}  
       shell: bash
       env:
         INPUT_TEST_API_KEY: ${{ inputs.key }}
