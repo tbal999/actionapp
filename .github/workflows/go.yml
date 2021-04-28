@@ -31,7 +31,7 @@ jobs:
           ref: ${{ env.BRANCH_NAME }}
           fetch-depth: 0
       - name: run composite action
-        uses: '.'
+        uses: './'
         with:
           path: './hello'
           key: 'Thisisakey'
