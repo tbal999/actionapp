@@ -12,7 +12,6 @@ import (
 const testAPI = "INPUT_TEST_API_KEY"
 const testSpace = "INPUT_TEST_SPACE"
 
-// iterate through a bunch of files - filepath fed via argument 1
 func iterfiles(path string) {
 	files, err := ioutil.ReadDir(path)
 	if err != nil {
@@ -24,8 +23,7 @@ func iterfiles(path string) {
 	log.Println("Complete")
 }
 
-// checkConfluenceEnv is a placeholder function for checking the required env vars are set
-func checkConfluenceEnv() bool {
+func checkEnv() bool {
 	apiKey, exists := os.LookupEnv(testAPI)
 	if !exists {
 		log.Printf("Environment variable not set for %s", testAPI)
