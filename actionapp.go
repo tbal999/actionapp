@@ -26,10 +26,11 @@ func iterfiles(path string) {
 }
 
 // checkConfluenceEnv is a placeholder function for checking the required env vars are set
-func checkConfluenceEnv() {
+func checkConfluenceEnv() bool {
 	username, exists := os.LookupEnv(testUser)
 	if !exists {
 		log.Printf("Environment variable not set for %s", testUser)
+		return false
 	} else {
 		log.Printf("USER: %s", username)
 	}
@@ -37,6 +38,7 @@ func checkConfluenceEnv() {
 	apiKey, exists := os.LookupEnv(testAPI)
 	if !exists {
 		log.Printf("Environment variable not set for %s", testAPI)
+		return false
 	} else {
 		log.Printf("API KEY: %s", apiKey)
 	}
@@ -44,13 +46,15 @@ func checkConfluenceEnv() {
 	space, exists := os.LookupEnv(testSpace)
 	if !exists {
 		log.Printf("Environment variable not set for %s", testSpace)
+		return false
 	} else {
 		log.Printf("SPACE: %s", space)
 	}
+	return true
 }
 
 func main() {
-	checkConfluenceEnv()
-	iterfiles(os.Args[1])
-	fmt.Println(jsonbase.Temptable) // just to demonstrate you can run go app with external packages.
+	if ok := checkConfluenceEnv(); ok {
+		iterfiles(os.Args[1])	
+	}
 }
